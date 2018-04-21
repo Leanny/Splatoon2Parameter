@@ -1,0 +1,157 @@
+{
+  "SubInkSaver": {
+	"ConsumeRt_Sub_High": 0.7,
+    "ConsumeRt_Sub_Mid": 0.85,
+    "ConsumeRt_Sub_Low": 1.0,
+    "ConsumeRt_Sub_Low_High": 0.8,
+    "ConsumeRt_Sub_Low_Mid": 0.9,
+    "ConsumeRt_Sub_Low_Low": 1.0,
+    "ConsumeRt_Sub_High_High": 0.65,
+    "ConsumeRt_Sub_High_Mid": 0.825,
+    "ConsumeRt_Sub_High_Low": 1.0
+  },
+  
+  "SquidMoveUp": {
+    "MoveVel_Stealth_High": 2.4,
+    "MoveVel_Stealth_Mid": 2.16,
+    "MoveVel_Stealth_Low": 1.92,
+    "MoveVel_Stealth_ShortWeapon_High": 2.4,
+    "MoveVel_Stealth_ShortWeapon_Mid": 2.208,
+    "MoveVel_Stealth_ShortWeapon_Low": 2.016,
+    "MoveVel_Stealth_BigWeapon_High": 2.4,
+    "MoveVel_Stealth_BigWeapon_Mid": 2.064,
+    "MoveVel_Stealth_BigWeapon_Low": 1.728
+  },
+  
+  "SpecialIncreaseUp": {
+    "SpecialRt_Charge_High": 1.3,
+    "SpecialRt_Charge_Mid": 1.15,
+    "SpecialRt_Charge_Low": 1.0
+  },
+  
+  "RespawnTimeSave": {
+    "Dying_AroudFrm_High": 30.0,
+    "Dying_AroudFrm_Mid": 60.0,
+    "Dying_AroudFrm_Low": 90.0,
+    "Dying_ChaseFrm_High": 90.0,
+    "Dying_ChaseFrm_Mid": 180.0,
+    "Dying_ChaseFrm_Low": 270.0
+  },
+
+  "RespawnSpecialGaugeSave": {
+    "SpecialRt_Restart_High": 1.0,
+    "SpecialRt_Restart_Mid": 0.7,
+    "SpecialRt_Restart_Low": 0.5
+  },
+  
+  "OpInkEffectReduction": {
+    "OpInk_JumpGnd_Msn_High": 1.05,
+    "OpInk_JumpGnd_Msn_Mid": 0.825,
+    "OpInk_JumpGnd_Msn_Low": 0.6,
+    "OpInk_JumpGnd_High": 1.05,
+    "OpInk_JumpGnd_Mid": 0.925,
+    "OpInk_JumpGnd_Low": 0.8,
+    "OpInk_VelGnd_ShotK_High": 1.0,
+    "OpInk_VelGnd_ShotK_Mid": 0.75,
+    "OpInk_VelGnd_ShotK_Low": 0.5,
+    "OpInk_VelGnd_Shot_High": 0.4,
+    "OpInk_VelGnd_Shot_Mid": 0.26,
+    "OpInk_VelGnd_Shot_Low": 0.12,
+    "OpInk_VelGnd_High": 0.72,
+    "OpInk_VelGnd_Mid": 0.48,
+    "OpInk_VelGnd_Low": 0.24,
+    "OpInk_Damage_Lmt_High": 0.35,
+    "OpInk_Damage_Lmt_Mid": 0.375,
+    "OpInk_Damage_Lmt_Low": 0.4,
+    "OpInk_Damage_High": 0.003,
+    "OpInk_Damage_Mid": 0.003,
+    "OpInk_Damage_Low": 0.003
+  },
+  
+  "MarkingTimeReduction": {
+    "MarkingTime_ShortRt_Thermal_High": 1.0,
+    "MarkingTime_ShortRt_Thermal_Mid": 1.0,
+    "MarkingTime_ShortRt_Thermal_Low": 1.0,
+    "Silhouette_DistFar_High": 290.0,
+    "Silhouette_DistFar_Mid": 250.0,
+    "Silhouette_DistFar_Low": 190.0,
+    "Silhouette_DistNear_High": 230.0,
+    "Silhouette_DistNear_Mid": 170.0,
+    "Silhouette_DistNear_Low": 130.0,
+    "MarkingTime_ShortRt_Trap_High": 0.1,
+    "MarkingTime_ShortRt_Trap_Mid": 0.55,
+    "MarkingTime_ShortRt_Trap_Low": 1.0,
+    "MarkingTime_ShortRt_High": 0.1,
+    "MarkingTime_ShortRt_Mid": 0.55,
+    "MarkingTime_ShortRt_Low": 1.0
+  },
+  
+  "MainInkSave": {
+    "ConsumeRt_Main_High_High": 0.5,
+    "ConsumeRt_Main_High_Mid": 0.7,
+    "ConsumeRt_Main_High_Low": 1.0,
+    "ConsumeRt_Main_High": 0.55,
+    "ConsumeRt_Main_Mid": 0.775,
+    "ConsumeRt_Main_Low": 1.0,
+    "ConsumeRt_Main_Low_High": 0.6,
+    "ConsumeRt_Main_Low_Mid": 0.8,
+    "ConsumeRt_Main_Low_Low": 1.0
+  },
+  
+  "JumpTimeSave": {
+    "DokanWarp_TameFrm_High": 20.0,
+    "DokanWarp_TameFrm_Mid": 35.0,
+    "DokanWarp_TameFrm_Low": 80.0,
+    "DokanWarp_MoveFrm_High": 96.6,
+    "DokanWarp_MoveFrm_Mid": 132.3,
+    "DokanWarp_MoveFrm_Low": 138.0
+  },
+  
+  "InkRecoveryUp": {
+    "RecoverFullFrm_Ink_High": 117.0,
+    "RecoverFullFrm_Ink_Mid": 148.5,
+    "RecoverFullFrm_Ink_Low": 180.0,
+    "RecoverNrmlFrm_Ink_High": 240.0,
+    "RecoverNrmlFrm_Ink_Mid": 420.0,
+    "RecoverNrmlFrm_Ink_Low": 600.0
+  },
+  
+  "RunSpeedUp": {
+    "MoveVel_Human_ShortWeapon_High": 1.44,
+    "MoveVel_Human_ShortWeapon_Mid": 1.24,
+    "MoveVel_Human_ShortWeapon_Low": 1.04,
+    "MoveVelRt_Human_Shot_High": 1.25,
+    "MoveVelRt_Human_Shot_Mid": 1.125,
+    "MoveVelRt_Human_Shot_Low": 1.0,
+    "MoveVel_Human_BigWeapon_High": 1.44,
+    "MoveVel_Human_BigWeapon_Mid": 1.16,
+    "MoveVel_Human_BigWeapon_Low": 0.88,
+    "MoveVel_Human_High": 1.44,
+    "MoveVel_Human_Mid": 1.2,
+    "MoveVel_Human_Low": 0.96,
+    "MoveVelRt_Human_ShotG_High": 1.3,
+    "MoveVelRt_Human_ShotG_Mid": 1.15,
+    "MoveVelRt_Human_ShotG_Low": 1.0
+  },
+  
+  "BombDistanceUp": {
+    "BombThrow_VelZ_High": 16.8,
+    "BombThrow_VelZ_Mid": 14.0,
+    "BombThrow_VelZ_Low": 11.2
+  },
+  
+  "BombDamageReduction": {
+    "BurstDamageRt_SubH_High": 0.5,
+    "BurstDamageRt_SubH_Mid": 0.75,
+    "BurstDamageRt_SubH_Low": 1.0,
+    "BurstDamageRt_SubL_High": 0.6,
+    "BurstDamageRt_SubL_Mid": 0.8,
+    "BurstDamageRt_SubL_Low": 1.0,
+    "BurstDamageRt_Special_High": 0.65,
+    "BurstDamageRt_Special_Mid": 0.825,
+    "BurstDamageRt_Special_Low": 1.0,
+    "BurstDamageRt_Main_High": 1.0,
+    "BurstDamageRt_Main_Mid": 1.0,
+    "BurstDamageRt_Main_Low": 1.0
+  }
+}
