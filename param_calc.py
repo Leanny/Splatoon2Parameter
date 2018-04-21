@@ -29,7 +29,6 @@ SPECIAL_CHARGE_UP = get_parameter_list("SpecialIncreaseUp", "SpecialRt_Charge", 
 RESPAWNTIME_DIEFRAME = get_parameter_list("RespawnTimeSave", "Dying_AroudFrm", parameter)
 RESPAWNTIME_CHASEFRAME = get_parameter_list("RespawnTimeSave", "Dying_ChaseFrm", parameter)
 
-# TODO
 RESPAWN_SPECIAL_GAUGE_SAVE = get_parameter_list("RespawnSpecialGaugeSave", "SpecialRt_Restart", parameter)
 
 OP_INK_JMP_MSN = get_parameter_list("OpInkEffectReduction", "OpInk_JumpGnd_Msn", parameter)
@@ -61,7 +60,49 @@ BOMB_DEF_SPECIAL = get_parameter_list("BombDamageReduction", "BurstDamageRt_Spec
 BOMB_DEF_MAIN = get_parameter_list("BombDamageReduction", "BurstDamageRt_Main", parameter)
 
 irreg_param = {
-# TODO: 0.4, 0.75
+# TODO: 0.75
+    0.4: {
+        0.0: 1.0,
+        0.0966: 0.9544858,
+        0.1883: 0.8900104,
+        0.2751: 0.81836354,
+        0.303: 0.79364968,
+        0.3571: 0.7435788,
+        0.3834: 0.71838748,
+        0.4342: 0.66793990,
+        0.4589: 0.6428398,
+        0.5065: 0.59302044,
+        0.5295: 0.56838166,
+        0.552: 0.5440594,
+        0.5739: 0.51998926,
+        0.5953: 0.49615610,
+        0.6162: 0.4726858,
+        0.6365: 0.44959110,
+        0.6562: 0.42690050,
+        0.6755: 0.40465326,
+        0.6942: 0.38272882,
+        0.7123: 0.36123896,
+        0.7299: 0.34027144,
+        0.747: 0.31989646,
+        0.7635: 0.29987222,
+        0.7795: 0.28038234,
+        0.795: 0.26163372,
+        0.8099: 0.24309966,
+        0.8242: 0.2254074,
+        0.8381: 0.20807398,
+        0.8514: 0.19154716,
+        0.8641: 0.17537490,
+        0.8763: 0.16011190,
+        0.8991: 0.117490352,
+        0.9097: 0.107490352,
+        0.9293: 0.092252016,
+        0.9383: 0.080761432,
+        0.9546: 0.049894828,
+        0.9619: 0.038894828,
+        0.9807: 0.025174052,
+        0.9947: 0.0069027544,
+        1.0: 0.0,
+    },
     0.6: {
         0.0: 0,
         0.0966: 0.178623288,
@@ -155,4 +196,6 @@ def get_effect(ability, points):
     return low + (high - low) * lerpN(slope, percentage)
 
 # example how to use it:
-print(get_effect(ISM_MID, 10))
+for i in range(0, 4):
+    for k in range(0, 10):
+        print(i*10+k*3, round(get_effect(RESPAWN_SPECIAL_GAUGE_SAVE, i*10+3*k),4))
