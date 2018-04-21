@@ -123,7 +123,6 @@ def lerpN(slope, percentage):
         if slope >= 0.001:
             return irreg_param[slope][percentage]
         else:
-            v6 = percentage < 0.999
             return 0.0
     return res 
   
