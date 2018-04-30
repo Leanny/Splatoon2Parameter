@@ -59,8 +59,10 @@ BOMB_DEF_SUBL = get_parameter_list("BombDamageReduction", "BurstDamageRt_SubL", 
 BOMB_DEF_SPECIAL = get_parameter_list("BombDamageReduction", "BurstDamageRt_Special", parameter)
 BOMB_DEF_MAIN = get_parameter_list("BombDamageReduction", "BurstDamageRt_Main", parameter)
 
+all = [JUMP_JUMP]
+
 irreg_param = {
-# TODO: 0.75
+# TODO: 0.75, 0.1377
     0.4: {
         0.0: 0.0,
         0.0966: -0.045514,
@@ -189,13 +191,14 @@ def get_effect(ability, points):
                 slope2 = round((mid - high) / (low - high), 4)
 
         c3 = 1.0
-        slope = 1.0 - slope2
+        slope = round(1.0 - slope2, 4)
 
     tmp = calcSkillPoint2Percent(points)
     percentage = round(tmp / 100.0, 4)
     return low + (high - low) * lerpN(slope, percentage)
 
 # example how to use it:
-for i in range(0, 4):
-    for k in range(0, 10):
-        print(i*10+k*3, round(get_effect(RESPAWN_SPECIAL_GAUGE_SAVE, i*10+3*k),4))
+for a in all:
+    for i in range(0, 4):
+        for k in range(0, 10):
+            print(i*10+k*3, round(get_effect(a, i*10+3*k),4))
