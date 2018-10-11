@@ -30,6 +30,7 @@ RESPAWNTIME_DIEFRAME = get_parameter_list("RespawnTimeSave", "Dying_AroudFrm", p
 RESPAWNTIME_CHASEFRAME = get_parameter_list("RespawnTimeSave", "Dying_ChaseFrm", parameter)
 
 RESPAWN_SPECIAL_GAUGE_SAVE = get_parameter_list("RespawnSpecialGaugeSave", "SpecialRt_Restart", parameter)
+RESPAWN_SPECIAL_GAUGE_SAVE_SPLASHDOWN = get_parameter_list("RespawnSpecialGaugeSave", "SpecialRt_Restart_SuperLanding", parameter)
 
 OP_INK_JMP_MSN = get_parameter_list("OpInkEffectReduction", "OpInk_JumpGnd_Msn", parameter)
 OP_INK_JMP = get_parameter_list("OpInkEffectReduction", "OpInk_JumpGnd", parameter)
@@ -53,13 +54,15 @@ IRU_STAND = get_parameter_list("InkRecoveryUp", "RecoverFullFrm_Ink", parameter)
 IRU_SWIM = get_parameter_list("InkRecoveryUp", "RecoverNrmlFrm_Ink", parameter)
 
 BOMB_DISTANCE_UP = get_parameter_list("BombDistanceUp", "BombThrow_VelZ", parameter)
+BOMB_DISTANCE_UP_PIYO = get_parameter_list("BombDistanceUp", "BombThrow_VelZ_BombPiyo", parameter)
+BOMB_DISTANCE_UP_POINTSENSOR = get_parameter_list("BombDistanceUp", "BombThrow_VelZ_PointSensor", parameter)
 
 BOMB_DEF_SUBH = get_parameter_list("BombDamageReduction", "BurstDamageRt_SubH", parameter)
 BOMB_DEF_SUBL = get_parameter_list("BombDamageReduction", "BurstDamageRt_SubL", parameter)
 BOMB_DEF_SPECIAL = get_parameter_list("BombDamageReduction", "BurstDamageRt_Special", parameter)
 BOMB_DEF_MAIN = get_parameter_list("BombDamageReduction", "BurstDamageRt_Main", parameter)
 
-all = [JUMP_JUMP]
+all = [IRU_STAND, IRU_SWIM]
 
 irreg_param = {
 # TODO: 0.75, 0.1377
@@ -198,7 +201,10 @@ def get_effect(ability, points):
     return low + (high - low) * lerpN(slope, percentage)
 
 # example how to use it:
-for a in all:
-    for i in range(0, 4):
-        for k in range(0, 10):
-            print(i*10+k*3, round(get_effect(a, i*10+3*k),4))
+for i in range(0, 4):
+    for k in range(0, 10):
+        pt = "{0}.{1}".format(i, k)
+        eff1 = get_effect(IRU_STAND, i*10+3*k)
+        eff2 = get_effect(IRU_SWIM, i*10+3*k)
+        print(pt, round(eff1, 4))
+        #print(pt, round(eff2, 4))

@@ -41,7 +41,10 @@
   "RespawnSpecialGaugeSave": {
         "SpecialRt_Restart_High": 1.0,
         "SpecialRt_Restart_Low": 0.5,
-        "SpecialRt_Restart_Mid": 0.8
+        "SpecialRt_Restart_Mid": 0.8,
+		"SpecialRt_Restart_SuperLanding_High": 1.25,
+        "SpecialRt_Restart_SuperLanding_Low": 0.75,
+        "SpecialRt_Restart_SuperLanding_Mid": 1.05
   },
   
   "OpInkEffectReduction": {
@@ -135,9 +138,15 @@
   },
   
   "BombDistanceUp": {
+        "BombThrow_VelZ_BombPiyo_High": 18.4,
+        "BombThrow_VelZ_BombPiyo_Low": 13.6,
+        "BombThrow_VelZ_BombPiyo_Mid": 16.0,
         "BombThrow_VelZ_High": 16.8,
         "BombThrow_VelZ_Low": 11.2,
-        "BombThrow_VelZ_Mid": 14.0
+        "BombThrow_VelZ_Mid": 14.0,
+        "BombThrow_VelZ_PointSensor_High": 18.4,
+        "BombThrow_VelZ_PointSensor_Low": 13.6,
+        "BombThrow_VelZ_PointSensor_Mid": 16.0
   },
   
   "BombDamageReduction": {
