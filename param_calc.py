@@ -1,4 +1,5 @@
 import json
+from math import isclose
 
 parameter = json.load(open("parameter.json"))
 
@@ -172,30 +173,17 @@ def lerpN(slope, percentage):
             return 0.0
     return res 
   
+
+def get_slope_simple(ability):
+    # Thanks to Lunaji
+    high, mid, low = ability
+    if isclose(high, low):
+        return 0.0
+    return (mid-low)/(high-low)
+    
 def get_effect(ability, points):
     high, mid, low = ability
-    if low <= high:
-        slope = 0.0
-        if mid > low:
-            if mid >= high:
-                slope = 1.0
-            else:
-                slope2 = high - low
-                if high - low != 0.0:
-                    c3 = mid - low
-                    slope = round(c3 / slope2, 4)
-
-    else:
-        slope2 = 0
-        if mid > high:
-            if mid >= low:
-                slope2 = 1.0
-            elif (low - high) != 0.0:
-                slope2 = round((mid - high) / (low - high), 4)
-
-        c3 = 1.0
-        slope = round(1.0 - slope2, 4)
-
+    slope = round(get_slope_simple(ability), 4)
     tmp = calcSkillPoint2Percent(points)
     percentage = round(tmp / 100.0, 4)
     return low + (high - low) * lerpN(slope, percentage)
