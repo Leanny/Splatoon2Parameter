@@ -108,11 +108,13 @@ def get_effect(ability, points, ninjasquid = False):
         return 0.9 * result # ninja squid reduces speed by 10%
     return result
 
-# example how to use it:
-for i in range(0, 4):
-    for k in range(0, 10):
-        pt = "{0}.{1}".format(i, k)
-        eff1 = get_effect(IRU_STAND, i*10+3*k)
-        eff2 = get_effect(IRU_SWIM, i*10+3*k)
-        print(pt, round(eff1, 4))
-        #print(pt, round(eff2, 4))
+
+if __name__ == '__main__':
+    # example how to use it:
+    for i in range(0, 4):
+        for k in range(0, 10):
+            pt = "{0}.{1}".format(i, k)
+            eff1 = get_effect(IRU_STAND, i*10+3*k)
+            eff2 = get_effect(IRU_SWIM, i*10+3*k)
+            print(pt, round(eff1, 4))
+            #print(pt, round(eff2, 4))
