@@ -66,14 +66,7 @@ BOMB_DEF_MAIN = get_parameter_list("BombDamageReduction", "BurstDamageRt_Main", 
 all = [IRU_STAND, IRU_SWIM]
 
 def calcSkillPoint2Percent(points):
-    result = (points * 3.3) - (points * points * 0.027)
-    if  result >= 0.0:
-        if result > 100.0:
-            result = 100.0
-    else:
-        result = 0
-        
-    return result
+    return min(max(0.0, 3.3*points-0.027*points**2), 100.0)
     
 def lerpN(slope, percentage):
     res = percentage
