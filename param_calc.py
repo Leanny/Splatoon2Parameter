@@ -1,5 +1,5 @@
 import json
-from math import isclose, exp, log
+from math import isclose, log2
 
 parameter = json.load(open("parameter.json"))
 
@@ -69,18 +69,9 @@ def calcSkillPoint2Percent(points):
     return min(max(0.0, 3.3*points-0.027*points**2), 100.0)
     
 def lerpN(slope, percentage):
-    res = percentage
-
-    if abs(slope - 0.5) >= 0.001:
-        if percentage == 0:
-            return 0.0
-        if percentage == 1.0:
-            return 1.0
-        if slope >= 0.001:
-            return exp(-log(percentage) * log(slope) / log(2))
-        else:
-            return 0.0
-    return res 
+    if isclose(percentage, 0.0) or not slope >= 0.001:
+        return 0.0
+    return 1/percentage**(log2(slope))
 
 def get_slope_simple(ability):
     # Thanks to Lunaji
