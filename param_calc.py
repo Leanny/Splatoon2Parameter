@@ -1,5 +1,5 @@
 import json
-from math import isclose, exp, log
+from math import isclose, log2
 
 parameter = json.load(open("parameter.json"))
 
@@ -66,28 +66,12 @@ BOMB_DEF_MAIN = get_parameter_list("BombDamageReduction", "BurstDamageRt_Main", 
 all = [IRU_STAND, IRU_SWIM]
 
 def calcSkillPoint2Percent(points):
-    result = (points * 3.3) - (points * points * 0.027)
-    if  result >= 0.0:
-        if result > 100.0:
-            result = 100.0
-    else:
-        result = 0
-        
-    return result
+    return min(max(0.0, 3.3*points-0.027*points**2), 100.0)
     
 def lerpN(slope, percentage):
-    res = percentage
-
-    if abs(slope - 0.5) >= 0.001:
-        if percentage == 0:
-            return 0.0
-        if percentage == 1.0:
-            return 1.0
-        if slope >= 0.001:
-            return exp(-log(percentage) * log(slope) / log(2))
-        else:
-            return 0.0
-    return res 
+    if isclose(percentage, 0.0) or not slope >= 0.001:
+        return 0.0
+    return 1/percentage**(log2(slope))
 
 def get_slope_simple(ability):
     # Thanks to Lunaji
@@ -108,11 +92,13 @@ def get_effect(ability, points, ninjasquid = False):
         return 0.9 * result # ninja squid reduces speed by 10%
     return result
 
-# example how to use it:
-for i in range(0, 4):
-    for k in range(0, 10):
-        pt = "{0}.{1}".format(i, k)
-        eff1 = get_effect(IRU_STAND, i*10+3*k)
-        eff2 = get_effect(IRU_SWIM, i*10+3*k)
-        print(pt, round(eff1, 4))
-        #print(pt, round(eff2, 4))
+
+if __name__ == '__main__':
+    # example how to use it:
+    for i in range(0, 4):
+        for k in range(0, 10):
+            pt = "{0}.{1}".format(i, k)
+            eff1 = get_effect(IRU_STAND, i*10+3*k)
+            eff2 = get_effect(IRU_SWIM, i*10+3*k)
+            print(pt, round(eff1, 4))
+            #print(pt, round(eff2, 4))
