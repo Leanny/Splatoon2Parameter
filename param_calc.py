@@ -7,63 +7,50 @@ def get_parameter_list(main_name, sub_name, parameter):
     suffix = ["High", "Mid", "Low"]
     return [parameter[main_name][f"{sub_name}_{s}"] for s in suffix]
 
-ISM_LOW = get_parameter_list("MainInkSave", "ConsumeRt_Main_Low", parameter)
-ISM_MID = get_parameter_list("MainInkSave", "ConsumeRt_Main", parameter)
-ISM_HIGH = get_parameter_list("MainInkSave", "ConsumeRt_Main_High", parameter)
-
-ISS_LOW = get_parameter_list("SubInkSaver", "ConsumeRt_Sub_Low", parameter)
-ISS_MID = get_parameter_list("SubInkSaver", "ConsumeRt_Sub", parameter)
-ISS_HIGH = get_parameter_list("SubInkSaver", "ConsumeRt_Sub_High", parameter)
-
-SWIMSPEED_HEAVY = get_parameter_list("SquidMoveUp", "MoveVel_Stealth_BigWeapon", parameter)
-SWIMSPEED_MID = get_parameter_list("SquidMoveUp", "MoveVel_Stealth", parameter)
-SWIMSPEED_LIGHT = get_parameter_list("SquidMoveUp", "MoveVel_Stealth_ShortWeapon", parameter)
-
-RUNSPEED_HEAVY = get_parameter_list("RunSpeedUp", "MoveVel_Human_BigWeapon", parameter)
-RUNSPEED_MID = get_parameter_list("RunSpeedUp", "MoveVel_Human", parameter)
-RUNSPEED_LIGHT = get_parameter_list("RunSpeedUp", "MoveVel_Human_ShortWeapon", parameter)
-RUNSPEED_SHOT = get_parameter_list("RunSpeedUp", "MoveVelRt_Human_Shot", parameter)
-RUNSPEED_SHOTG = get_parameter_list("RunSpeedUp", "MoveVelRt_Human_ShotG", parameter)
-
-SPECIAL_CHARGE_UP = get_parameter_list("SpecialIncreaseUp", "SpecialRt_Charge", parameter)
-
-RESPAWNTIME_DIEFRAME = get_parameter_list("RespawnTimeSave", "Dying_AroudFrm", parameter)
-RESPAWNTIME_CHASEFRAME = get_parameter_list("RespawnTimeSave", "Dying_ChaseFrm", parameter)
-
-RESPAWN_SPECIAL_GAUGE_SAVE = get_parameter_list("RespawnSpecialGaugeSave", "SpecialRt_Restart", parameter)
-RESPAWN_SPECIAL_GAUGE_SAVE_SPLASHDOWN = get_parameter_list("RespawnSpecialGaugeSave", "SpecialRt_Restart_SuperLanding", parameter)
-
-OP_INK_JMP_MSN = get_parameter_list("OpInkEffectReduction", "OpInk_JumpGnd_Msn", parameter)
-OP_INK_JMP = get_parameter_list("OpInkEffectReduction", "OpInk_JumpGnd", parameter)
-OP_INK_VEL_GND_SHOTK = get_parameter_list("OpInkEffectReduction", "OpInk_VelGnd_ShotK", parameter)
-OP_INK_VEL_GND_SHOT = get_parameter_list("OpInkEffectReduction", "OpInk_VelGnd_Shot", parameter)
-OP_INK_VEL_GND = get_parameter_list("OpInkEffectReduction", "OpInk_VelGnd", parameter)
-OP_INK_DMG_LMT = get_parameter_list("OpInkEffectReduction", "OpInk_Damage_Lmt", parameter)
-OP_INK_DMG = get_parameter_list("OpInkEffectReduction", "OpInk_Damage", parameter)
-
-MARKTIME_THERMAL = get_parameter_list("MarkingTimeReduction", "MarkingTime_ShortRt_Thermal", parameter)
-MARKTIME_FAR = get_parameter_list("MarkingTimeReduction", "Silhouette_DistFar", parameter)
-MARKTIME_CLOSE = get_parameter_list("MarkingTimeReduction", "Silhouette_DistNear", parameter)
-MARKTIME_TRAP = get_parameter_list("MarkingTimeReduction", "MarkingTime_ShortRt_Trap", parameter)
-MARKTIME_SHORTRT = get_parameter_list("MarkingTimeReduction", "MarkingTime_ShortRt", parameter)
-
-# TODO
-JUMP_SQUID = get_parameter_list("JumpTimeSave", "DokanWarp_TameFrm", parameter)
-JUMP_JUMP = get_parameter_list("JumpTimeSave", "DokanWarp_MoveFrm", parameter)
-
-IRU_STAND = get_parameter_list("InkRecoveryUp", "RecoverFullFrm_Ink", parameter)
-IRU_SWIM = get_parameter_list("InkRecoveryUp", "RecoverNrmlFrm_Ink", parameter)
-
-BOMB_DISTANCE_UP = get_parameter_list("BombDistanceUp", "BombThrow_VelZ", parameter)
-BOMB_DISTANCE_UP_PIYO = get_parameter_list("BombDistanceUp", "BombThrow_VelZ_BombPiyo", parameter)
-BOMB_DISTANCE_UP_POINTSENSOR = get_parameter_list("BombDistanceUp", "BombThrow_VelZ_PointSensor", parameter)
-
-BOMB_DEF_SUBH = get_parameter_list("BombDamageReduction", "BurstDamageRt_SubH", parameter)
-BOMB_DEF_SUBL = get_parameter_list("BombDamageReduction", "BurstDamageRt_SubL", parameter)
-BOMB_DEF_SPECIAL = get_parameter_list("BombDamageReduction", "BurstDamageRt_Special", parameter)
-BOMB_DEF_MAIN = get_parameter_list("BombDamageReduction", "BurstDamageRt_Main", parameter)
-
-all = [IRU_STAND, IRU_SWIM]
+abilities = {
+    'ISM_LOW': get_parameter_list('MainInkSave', 'ConsumeRt_Main_Low', parameter),
+    'ISM_MID': get_parameter_list('MainInkSave', 'ConsumeRt_Main', parameter),
+    'ISM_HIGH': get_parameter_list('MainInkSave', 'ConsumeRt_Main_High', parameter),
+    'ISS_LOW': get_parameter_list('SubInkSaver', 'ConsumeRt_Sub_Low', parameter),
+    'ISS_MID': get_parameter_list('SubInkSaver', 'ConsumeRt_Sub', parameter),
+    'ISS_HIGH': get_parameter_list('SubInkSaver', 'ConsumeRt_Sub_High', parameter),
+    'SWIMSPEED_HEAVY': get_parameter_list('SquidMoveUp', 'MoveVel_Stealth_BigWeapon', parameter),
+    'SWIMSPEED_MID': get_parameter_list('SquidMoveUp', 'MoveVel_Stealth', parameter),
+    'SWIMSPEED_LIGHT': get_parameter_list('SquidMoveUp', 'MoveVel_Stealth_ShortWeapon', parameter),
+    'RUNSPEED_HEAVY': get_parameter_list('RunSpeedUp', 'MoveVel_Human_BigWeapon', parameter),
+    'RUNSPEED_MID': get_parameter_list('RunSpeedUp', 'MoveVel_Human', parameter),
+    'RUNSPEED_LIGHT': get_parameter_list('RunSpeedUp', 'MoveVel_Human_ShortWeapon', parameter),
+    'RUNSPEED_SHOT': get_parameter_list('RunSpeedUp', 'MoveVelRt_Human_Shot', parameter),
+    'RUNSPEED_SHOTG': get_parameter_list('RunSpeedUp', 'MoveVelRt_Human_ShotG', parameter),
+    'SPECIAL_CHARGE_UP': get_parameter_list('SpecialIncreaseUp', 'SpecialRt_Charge', parameter),
+    'RESPAWNTIME_DIEFRAME': get_parameter_list('RespawnTimeSave', 'Dying_AroudFrm', parameter),
+    'RESPAWNTIME_CHASEFRAME': get_parameter_list('RespawnTimeSave', 'Dying_ChaseFrm', parameter),
+    'RESPAWN_SPECIAL_GAUGE_SAVE': get_parameter_list('RespawnSpecialGaugeSave', 'SpecialRt_Restart', parameter),
+    'RESPAWN_SPECIAL_GAUGE_SAVE_SPLASHDOWN': get_parameter_list('RespawnSpecialGaugeSave', 'SpecialRt_Restart_SuperLanding', parameter),
+    'OP_INK_JMP_MSN': get_parameter_list('OpInkEffectReduction', 'OpInk_JumpGnd_Msn', parameter),
+    'OP_INK_JMP': get_parameter_list('OpInkEffectReduction', 'OpInk_JumpGnd', parameter),
+    'OP_INK_VEL_GND_SHOTK': get_parameter_list('OpInkEffectReduction', 'OpInk_VelGnd_ShotK', parameter),
+    'OP_INK_VEL_GND_SHOT': get_parameter_list('OpInkEffectReduction', 'OpInk_VelGnd_Shot', parameter),
+    'OP_INK_VEL_GND': get_parameter_list('OpInkEffectReduction', 'OpInk_VelGnd', parameter),
+    'OP_INK_DMG_LMT': get_parameter_list('OpInkEffectReduction', 'OpInk_Damage_Lmt', parameter),
+    'OP_INK_DMG': get_parameter_list('OpInkEffectReduction', 'OpInk_Damage', parameter),
+    'MARKTIME_THERMAL': get_parameter_list('MarkingTimeReduction', 'MarkingTime_ShortRt_Thermal', parameter),
+    'MARKTIME_FAR': get_parameter_list('MarkingTimeReduction', 'Silhouette_DistFar', parameter),
+    'MARKTIME_CLOSE': get_parameter_list('MarkingTimeReduction', 'Silhouette_DistNear', parameter),
+    'MARKTIME_TRAP': get_parameter_list('MarkingTimeReduction', 'MarkingTime_ShortRt_Trap', parameter),
+    'MARKTIME_SHORTRT': get_parameter_list('MarkingTimeReduction', 'MarkingTime_ShortRt', parameter),
+    'JUMP_SQUID': get_parameter_list('JumpTimeSave', 'DokanWarp_TameFrm', parameter),
+    'JUMP_JUMP': get_parameter_list('JumpTimeSave', 'DokanWarp_MoveFrm', parameter),
+    'IRU_STAND': get_parameter_list('InkRecoveryUp', 'RecoverFullFrm_Ink', parameter),
+    'IRU_SWIM': get_parameter_list('InkRecoveryUp', 'RecoverNrmlFrm_Ink', parameter),
+    'BOMB_DISTANCE_UP': get_parameter_list('BombDistanceUp', 'BombThrow_VelZ', parameter),
+    'BOMB_DISTANCE_UP_PIYO': get_parameter_list('BombDistanceUp', 'BombThrow_VelZ_BombPiyo', parameter),
+    'BOMB_DISTANCE_UP_POINTSENSOR': get_parameter_list('BombDistanceUp', 'BombThrow_VelZ_PointSensor', parameter),
+    'BOMB_DEF_SUBH': get_parameter_list('BombDamageReduction', 'BurstDamageRt_SubH', parameter),
+    'BOMB_DEF_SUBL': get_parameter_list('BombDamageReduction', 'BurstDamageRt_SubL', parameter),
+    'BOMB_DEF_SPECIAL': get_parameter_list('BombDamageReduction', 'BurstDamageRt_Special', parameter),
+    'BOMB_DEF_MAIN': get_parameter_list('BombDamageReduction', 'BurstDamageRt_Main', parameter),
+}
 
 def calcSkillPoint2Percent(points):
     return min(max(0.0, 3.3*points-0.027*points**2), 100.0)
@@ -98,7 +85,7 @@ if __name__ == '__main__':
     for i in range(0, 4):
         for k in range(0, 10):
             pt = "{0}.{1}".format(i, k)
-            eff1 = get_effect(IRU_STAND, i*10+3*k)
-            eff2 = get_effect(IRU_SWIM, i*10+3*k)
+            eff1 = get_effect(abilities['IRU_STAND'], i*10+3*k)
+            eff2 = get_effect(abilities['IRU_SWIM'], i*10+3*k)
             print(pt, round(eff1, 4))
             #print(pt, round(eff2, 4))
