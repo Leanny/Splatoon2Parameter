@@ -90,13 +90,13 @@ if __name__ == '__main__':
         names = sorted([*abilities.keys()])
         assert(args.ability>0 and args.ability<=len(names))
         
-        print('{:<10}{:<}'.format('M.S','Effect'))
-        for mains in range(4-int(args.ninja_squid)):
-            for subs in range(10):
-                pt = "{0}.{1}".format(mains, subs)
-                index = args.ability
-                effect = get_effect(abilities[names[index]], mains*10+subs*3, args.ninja_squid)
-                print('{:<10}{:05.4f}'.format(pt, effect))
+        aps = sorted([mains*10 + subs*3 for mains in range(4-int(args.ninja_squid)) for subs in range(10)])
+        
+        print('{:<10}{:<}'.format('AP','Effect'))
+        for ap in aps:            
+            index = args.ability
+            effect = get_effect(abilities[names[index]], ap, args.ninja_squid)
+            print('{:<10}{:05.4f}'.format(str(ap).rjust(2), effect))
     else:
         print("""
                 ____        _       _                      ____  
