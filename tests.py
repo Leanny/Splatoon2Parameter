@@ -54,7 +54,7 @@ class TestParameterCalculator(unittest.TestCase):
         }
         
         
-    def assertListAlmostEqual(self, a, b, places=None, msg=None, delta=1e-01):
+    def assertListAlmostEqual(self, a, b, places=6, msg=None, delta=None):
         len_a = len(a)
         self.assertEqual(len_a, len(b))
         
@@ -106,7 +106,7 @@ class TestParameterCalculator(unittest.TestCase):
         expected = [0.0,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.1376812,0.75,0.5,0.6,0.5,0.5,0.0,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.6,0.6,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,]
         
         names = sorted([*self.abilities.keys()])        
-        results = [param_calc.get_slope(self.abilities[name]) for name in names]
+        results = [param_calc.get_slope_simple(self.abilities[name]) for name in names]
         
         self.assertListAlmostEqual(results, expected)
 
