@@ -5,7 +5,7 @@ parameter = json.load(open("parameter.json"))
 
 def get_parameter_list(main_name, sub_name, parameter):
     suffix = ["High", "Mid", "Low"]
-    return [parameter[main_name][f"{sub_name}_{s}"] for s in suffix]
+    return [parameter[main_name][sub_name+'_'+s] for s in suffix]
 
 abilities = {
     'ISM_LOW': get_parameter_list('MainInkSave', 'ConsumeRt_Main_Low', parameter),
