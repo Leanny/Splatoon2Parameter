@@ -54,7 +54,7 @@ class TestParameterCalculator(unittest.TestCase):
         }
         
         
-    def assertListAlmostEqual(self, a, b, places=6, msg=None, delta=None):
+    def assertListAlmostEqual(self, a, b, places=None, msg=None, delta=1e-01):
         len_a = len(a)
         self.assertEqual(len_a, len(b))
         

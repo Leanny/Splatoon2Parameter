@@ -68,11 +68,11 @@ def get_slope(ability):
     
 def get_effect(ability, points, ninjasquid = False):
     high, mid, low = ability
-    slope = round(get_slope(ability), 4)
+    slope = get_slope(ability)
     tmp = calcSkillPoint2Percent(points)
     if ninjasquid:
         tmp *= 0.8 # ninja squid adds percentage penality
-    percentage = round(tmp / 100.0, 4)
+    percentage = tmp / 100.0
     result = low + (high - low) * lerpN(slope, percentage)
     if ninjasquid:
         return 0.9 * result # ninja squid reduces speed by 10%
