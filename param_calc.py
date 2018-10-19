@@ -60,8 +60,7 @@ def lerpN(slope, percentage):
         return 0.0
     return 1/percentage**(log2(slope))
 
-def get_slope_simple(ability):
-    # Thanks to Lunaji
+def get_slope(ability):
     high, mid, low = ability
     if isclose(high, low):
         return 0.0
@@ -69,7 +68,7 @@ def get_slope_simple(ability):
     
 def get_effect(ability, points, ninjasquid = False):
     high, mid, low = ability
-    slope = round(get_slope_simple(ability), 4)
+    slope = round(get_slope(ability), 4)
     tmp = calcSkillPoint2Percent(points)
     if ninjasquid:
         tmp *= 0.8 # ninja squid adds percentage penality
