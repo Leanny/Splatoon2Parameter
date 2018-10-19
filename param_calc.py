@@ -1,5 +1,6 @@
 import json
 from math import isclose, log2
+import argparse
 
 parameter = json.load(open("parameter.json"))
 
@@ -80,7 +81,24 @@ def get_effect(ability, points, ninjasquid = False):
 
 
 if __name__ == '__main__':
-    print("""
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-a', '--ability', type=int)
+    parser.add_argument('-n', '--ninja-squid', action='store_true')
+    args = parser.parse_args()
+    
+    if args.ability is not None:
+        names = sorted([*abilities.keys()])
+        assert(args.ability>0 and args.ability<=len(names))
+        
+        print('{:<10}{:<}'.format('M.S','Effect'))
+        for mains in range(4-int(args.ninja_squid)):
+            for subs in range(10):
+                pt = "{0}.{1}".format(mains, subs)
+                index = args.ability
+                effect = get_effect(abilities[names[index]], mains*10+subs*3, args.ninja_squid)
+                print('{:<10}{:05.4f}'.format(pt, effect))
+    else:
+        print("""
                 ____        _       _                      ____  
                / ___| _ __ | | __ _| |_ ___   ___  _ __   |___ \ 
                \___ \| '_ \| |/ _` | __/ _ \ / _ \| '_ \    __) |
@@ -93,9 +111,13 @@ if __name__ == '__main__':
                |  __/ (_| | | | (_| | | | | | |  __/ ||  __/ |   
                |_|   \__,_|_|  \__,_|_| |_| |_|\___|\__\___|_|   
                                                                  
-    """)    
-    
-    names = sorted([*abilities.keys()])
-    
-    for i in range(0, len(names)-1,2):
-        print('{:<50}{:<}'.format(str(i+1).rjust(2)+'. '+names[i], str(i+2).rjust(2)+'. '+names[i+1]))
+        """)    
+        
+        names = sorted([*abilities.keys()])
+        
+        for i in range(0, len(names)-1,2):
+            print('{:<50}{:<}'.format(str(i+1).rjust(2)+'. '+names[i], str(i+2).rjust(2)+'. '+names[i+1]))
+        
+        print()    
+        parser.print_help()
+                
