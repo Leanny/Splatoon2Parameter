@@ -51,6 +51,33 @@ abilities = {
     'Bomb Defense - Heavy Light': get_parameter_list('BombDamageReduction', 'BurstDamageRt_SubL', parameter),
     'Bomb Defense - Special': get_parameter_list('BombDamageReduction', 'BurstDamageRt_Special', parameter),
     'Bomb Defense - Additional': get_parameter_list('BombDamageReduction', 'BurstDamageRt_Main', parameter),
+    'Special Power Up - Baller HP': get_parameter_list('SpecialTime_Up', 'AquaBall_HP', parameter),
+    'Special Power Up - Inkjet Bullet Damage Radius Multiplier': get_parameter_list('SpecialTime_Up', 'Inkjet_BombCoreRadiusRate', parameter),
+    'Special Power Up - Inkjet Explosion Paint Radius': get_parameter_list('SpecialTime_Up', 'Inkjet_Burst_PaintR', parameter),
+    'Special Power Up - Inkjet Explosion Paint Splash Radius': get_parameter_list('SpecialTime_Up', 'Inkjet_Burst_SplashPaintR', parameter),
+    'Special Power Up - Inkjet Explosion Paint Splash Velocity H': get_parameter_list('SpecialTime_Up', 'Inkjet_Burst_SplashVelH', parameter),
+    'Special Power Up - Inkjet Explosion Paint Splash Velocity L': get_parameter_list('SpecialTime_Up', 'Inkjet_Burst_SplashVelL', parameter),
+    'Special Power Up - Ink Storm Duration': get_parameter_list('SpecialTime_Up', 'RainCloud_RainAreaFrame', parameter),
+    'Special Power Up - Ink Armor Wind Up Time': get_parameter_list('SpecialTime_Up', 'SuperArmor_EnergyAbsorbFrm', parameter),    
+    'Special Power Up - Ink Armor Object Shredder Multiplier': get_parameter_list('SpecialTime_Up', 'SuperArmor_ObjectEffect_Up_DamageRt', parameter),   
+    'Special Power Up - Ink Armor Duration': get_parameter_list('SpecialTime_Up', 'SuperArmor_PaintGauge_SpecialFrm_DamageRt', parameter),   
+    'Special Power Up - Booyah Ball Auto Charge Increase': get_parameter_list('SpecialTime_Up', 'SuperBall_ChargeRtAutoIncr', parameter),   
+    'Special Power Up - Booyah Ball Object Shredder Multiplier': get_parameter_list('SpecialTime_Up', 'SuperBall_ObjectEffect_Up_DamageRt', parameter),   
+    'Special Power Up - Splash Down Jump-In Additional Height': get_parameter_list('SpecialTime_Up', 'SuperLanding_Burst_Landing_AddHeight', parameter),    
+    'Special Power Up - Splash Down Jump-In Additional Height (Stealth Jump)': get_parameter_list('SpecialTime_Up', 'SuperLanding_Burst_Landing_AddHeight_SJ', parameter),    
+    'Special Power Up - Splash Down Jump-In Height': get_parameter_list('SpecialTime_Up', 'SuperLanding_Burst_Landing_Height', parameter),   
+    'Special Power Up - Splash Down Jump-In Height (Stealth Jump)': get_parameter_list('SpecialTime_Up', 'SuperLanding_Burst_Landing_Height_SJ', parameter),   
+    'Special Power Up - Splash Down Burst Radius Far': get_parameter_list('SpecialTime_Up', 'SuperLanding_Burst_Radius_Far', parameter),   
+    'Special Power Up - Splash Down Burst Radius Far (Stealth Jump)': get_parameter_list('SpecialTime_Up', 'SuperLanding_Burst_Radius_Far_SJ', parameter),   
+    'Special Power Up - Splash Down Burst Radius Middle': get_parameter_list('SpecialTime_Up', 'SuperLanding_Burst_Radius_Middle', parameter),   
+    'Special Power Up - Splash Down Burst Radius Midle (Stealth Jump)': get_parameter_list('SpecialTime_Up', 'SuperLanding_Burst_Radius_Middle_SJ', parameter),   
+    'Special Power Up - Splash Down Burst Radius Close': get_parameter_list('SpecialTime_Up', 'SuperLanding_Burst_Radius_Near', parameter),   
+    'Special Power Up - Splash Down Burst Radius Close (Stealth Jump)': get_parameter_list('SpecialTime_Up', 'SuperLanding_Burst_Radius_Near_SJ', parameter), 
+    'Special Power Up - Tenta Missiles Paint Radius': get_parameter_list('SpecialTime_Up', 'SuperMissiles_Burst_PaintR', parameter),    
+    'Special Power Up - Tenta Missiles Cross Paint Radius': get_parameter_list('SpecialTime_Up', 'SuperMissiles_CrossPaintRadius', parameter),    
+    'Special Power Up - Tenta Missiles Cross Paint Ray Length': get_parameter_list('SpecialTime_Up', 'SuperMissiles_CrossPaintRayLength', parameter),   
+    'Special Power Up - Tenta Missiles Target Circle Radius': get_parameter_list('SpecialTime_Up', 'SuperMissiles_TargetInCircleRadius', parameter),   
+    'Special Power Up - Sting Ray Duration': get_parameter_list('SpecialTime_Up', 'WaterCutter_PaintGauge_SpecialFrm', parameter)  
 }
 
 def calcSkillPoint2Percent(points):
@@ -118,7 +145,7 @@ if __name__ == '__main__':
         names = sorted([*abilities.keys()])
         
         for i in range(0, len(names)-1,2):
-            print('{:<50}{:<}'.format(str(i+1).rjust(2)+'. '+names[i], str(i+2).rjust(2)+'. '+names[i+1]))
+            print('{:<76}{:<}'.format(str(i+1).rjust(2)+'. '+names[i], str(i+2).rjust(2)+'. '+names[i+1]))
         
         print()    
         parser.print_help()
