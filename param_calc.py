@@ -3,7 +3,7 @@ from math import isclose, log2
 import argparse
 
 with open('parameter.json', 'r') as fp:
-    abilities = json.load(fp)
+    parameters = json.load(fp)
 
 def calcSkillPoint2Percent(points):
     return min(max(0.0, 3.3*points-0.027*points**2), 100.0)
@@ -34,38 +34,38 @@ def get_effect(ability, points, ninjasquid = False):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-a', '--ability', type=int)
+    parser.add_argument('-p', '--parameter', type=int)
     parser.add_argument('-c', '--category', type=int)
     parser.add_argument('-l', '--list', action='store_true')
     parser.add_argument('-n', '--ninja-squid', action='store_true')
     args = parser.parse_args()
     
     if args.category is not None:
-        category_names = sorted([*abilities.keys()])
+        category_names = sorted([*parameters.keys()])
         assert(0 < args.category <= len(category_names))
         category = category_names[args.category-1]
-        ability_names = sorted([*abilities[category].keys()])
+        parameter_names = sorted([*parameters[category].keys()])
 
-        if args.ability is not None:
-            assert(0 < args.ability <= len(ability_names))
-            ability_name = ability_names[args.ability - 1]
+        if args.parameter is not None:
+            assert(0 < args.parameter <= len(parameter_names))
+            parameter_name = parameter_names[args.parameter - 1]
 
-            print(category, ability_name, sep=' - ')
+            print(category, parameter_name, sep=' - ')
 
             aps = sorted([mains*10 + subs*3 for mains in range(4-int(args.ninja_squid)) for subs in range(10)])
         
             print('{:<10}{:<}'.format('AP','Effect'))
             for ap in aps:
-                effect = get_effect(abilities[category][ability_name], ap, args.ninja_squid)
+                effect = get_effect(parameters[category][parameter_name], ap, args.ninja_squid)
                 print('{:<10}{:05.4f}'.format(str(ap).rjust(2), effect))
         else:
             print('Parameters under', category)
-            for i, ability_name in enumerate(ability_names):
-                print(i+1, ability_name)
+            for i, parameter_name in enumerate(parameter_names):
+                print(i + 1, parameter_name)
 
     elif args.list:
         print('Categories:')
-        category_names = sorted([*abilities.keys()])
+        category_names = sorted([*parameters.keys()])
 
         for i, category in enumerate(category_names):
             print(i+1, category)
