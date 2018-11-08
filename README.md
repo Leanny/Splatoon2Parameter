@@ -2,8 +2,11 @@
 
 ## Basic Usage
 
-```python param_calc.py```  
-Show list of abilities
+```python param_calc.py -l```  
+List categories of parameters
 
-```python param_calc.py -a <index>```  
-Calculate the effect for ability with given index on list above
+```python param_calc.py -c <index>```  
+List parameters under category with given index 
+
+```python param_calc.py -c <index_1> -p <index_2>```  
+Calculate the effect for parameter under category with given indices

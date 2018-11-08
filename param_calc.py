@@ -34,10 +34,10 @@ def get_effect(ability, points, ninjasquid = False):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-p', '--parameter', type=int)
-    parser.add_argument('-c', '--category', type=int)
-    parser.add_argument('-l', '--list', action='store_true')
-    parser.add_argument('-n', '--ninja-squid', action='store_true')
+    parser.add_argument('-p', '--parameter', type=int, help='Parameter to calculate, requires a category')
+    parser.add_argument('-c', '--category', type=int, help='List parameters under this category or calculate given parameter')
+    parser.add_argument('-l', '--list', action='store_true', help='List categories of parameters')
+    parser.add_argument('-n', '--ninja-squid', action='store_true', help='Enable ninja squid effect in calculation')
     args = parser.parse_args()
     
     if args.category is not None:
