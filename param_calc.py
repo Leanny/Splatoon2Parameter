@@ -44,9 +44,19 @@ abilities = {
     'Quick Super Jump - Jump': get_parameter_list('JumpTimeSave', 'DokanWarp_MoveFrm', parameter),
     'Ink Recovery Up - In Ink': get_parameter_list('InkRecoveryUp', 'RecoverFullFrm_Ink', parameter),
     'Ink Recovery Up - Standing': get_parameter_list('InkRecoveryUp', 'RecoverNrmlFrm_Ink', parameter),
-    'Bomb Distance Up': get_parameter_list('BombDistanceUp', 'BombThrow_VelZ', parameter),
-    'Bomb Distance Up - Fizzy': get_parameter_list('BombDistanceUp', 'BombThrow_VelZ_BombPiyo', parameter),
-    'Bomb Distance Up - Point Sensor': get_parameter_list('BombDistanceUp', 'BombThrow_VelZ_PointSensor', parameter),
+    'Sub Power Up - General Bomb Distance Up': get_parameter_list('BombDistanceUp', 'BombThrow_VelZ', parameter),
+    'Sub Power Up - Fizzy Bomb Distance Up': get_parameter_list('BombDistanceUp', 'BombThrow_VelZ_BombPiyo', parameter),
+    'Sub Power Up - Point Sensor Distance Up ': get_parameter_list('BombDistanceUp', 'BombThrow_VelZ_PointSensor', parameter),
+    'Sub Power Up - Torpedo Distance Up ': get_parameter_list('BombDistanceUp', 'BombThrow_VelZ_BombTako', parameter),
+    'Sub Power Up - Splash Wall Max HP': get_parameter_list('SubPowerUp', 'Shield_MaxHP', parameter) ,
+    'Sub Power Up - Splash Wall Object Shredder Multiplier': get_parameter_list('SubPowerUp', 'Shield_ObjDamageRate', parameter) ,
+    'Sub Power Up - Beakon Object Shredder Multiplier': get_parameter_list('SubPowerUp', 'Flag_ObjDamageRate', parameter) ,
+    'Sub Power Up - Point Sensor Mark Time Duration': get_parameter_list('SubPowerUp', 'Sensor_MarkingFrame', parameter) ,
+    'Sub Power Up - Sprinkler Object Shredder Multiplier': get_parameter_list('SubPowerUp', 'Sprinkler_ObjDamageRate', parameter) ,
+    'Sub Power Up - Sprinkler First Phase Duration': get_parameter_list('SubPowerUp', 'Sprinkler_PeriodFirst', parameter),
+    'Sub Power Up - Sprinkler Second Phase Duration': get_parameter_list('SubPowerUp', 'Sprinkler_PeriodSecond', parameter),
+    'Sub Power Up - Ink Mine Mark Radius': get_parameter_list('SubPowerUp', 'Trap_BombCoreRadiusRate', parameter),
+    'Sub Power Up - Ink Mine Mark Time Duration': get_parameter_list('SubPowerUp', 'Trap_MarkingFrame', parameter),
     'Bomb Defense - Heavy Sub': get_parameter_list('BombDamageReduction', 'BurstDamageRt_SubH', parameter),
     'Bomb Defense - Heavy Light': get_parameter_list('BombDamageReduction', 'BurstDamageRt_SubL', parameter),
     'Bomb Defense - Special': get_parameter_list('BombDamageReduction', 'BurstDamageRt_Special', parameter),
@@ -81,7 +91,8 @@ abilities = {
     'Special Power Up - Tenta Missiles Cross Paint Radius': get_parameter_list('SpecialTime_Up', 'SuperMissiles_CrossPaintRadius', parameter),    
     'Special Power Up - Tenta Missiles Cross Paint Ray Length': get_parameter_list('SpecialTime_Up', 'SuperMissiles_CrossPaintRayLength', parameter),   
     'Special Power Up - Tenta Missiles Target Circle Radius': get_parameter_list('SpecialTime_Up', 'SuperMissiles_TargetInCircleRadius', parameter),   
-    'Special Power Up - Sting Ray Duration': get_parameter_list('SpecialTime_Up', 'WaterCutter_PaintGauge_SpecialFrm', parameter)  
+    'Special Power Up - Sting Ray Duration': get_parameter_list('SpecialTime_Up', 'WaterCutter_PaintGauge_SpecialFrm', parameter),
+    'Special Power Up - Ultra Stamp Duration': get_parameter_list('SpecialTime_Up', 'UltraStamp_PaintGauge_SpecialFrm', parameter)
 }
 
 def calcSkillPoint2Percent(points):

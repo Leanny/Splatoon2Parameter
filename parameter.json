@@ -144,9 +144,12 @@
         "BombThrow_VelZ_High": 16.8,
         "BombThrow_VelZ_Low": 11.2,
         "BombThrow_VelZ_Mid": 14.0,
-        "BombThrow_VelZ_PointSensor_High": 18.4,
-        "BombThrow_VelZ_PointSensor_Low": 13.6,
-        "BombThrow_VelZ_PointSensor_Mid": 16.0
+        "BombThrow_VelZ_PointSensor_High": 19.0,
+        "BombThrow_VelZ_PointSensor_Low": 15.0,
+        "BombThrow_VelZ_PointSensor_Mid": 17.0,
+		"BombThrow_VelZ_BombTako_High": 18.4,
+		"BombThrow_VelZ_BombTako_Mid": 16.0,
+		"BombThrow_VelZ_BombTako_Low": 13.6
   },
   
   "BombDamageReduction": {
@@ -259,6 +262,38 @@
 		"SuperMissiles_TargetInCircleRadius_Low": 140.0,
 		"WaterCutter_PaintGauge_SpecialFrm_High": 585,
 		"WaterCutter_PaintGauge_SpecialFrm_Mid": 525,
-		"WaterCutter_PaintGauge_SpecialFrm_Low": 465
+		"WaterCutter_PaintGauge_SpecialFrm_Low": 465,
+		"UltraStamp_PaintGauge_SpecialFrm_High": 660,
+		"UltraStamp_PaintGauge_SpecialFrm_Mid": 600,
+		"UltraStamp_PaintGauge_SpecialFrm_Low": 540
+  },
+  "SubPowerUp": {
+		"Shield_MaxHP_High": 15000,
+		"Shield_MaxHP_Mid": 11500,
+		"Shield_MaxHP_Low": 8000,
+		"Shield_ObjDamageRate_High": 1.5,
+		"Shield_ObjDamageRate_Mid": 1.5,
+		"Shield_ObjDamageRate_Low": 1.5,
+		"Flag_ObjDamageRate_High": 10.0,
+		"Flag_ObjDamageRate_Mid": 10.0,
+		"Flag_ObjDamageRate_Low": 10.0,
+		"Sensor_MarkingFrame_High": 960,
+		"Sensor_MarkingFrame_Mid": 720,
+		"Sensor_MarkingFrame_Low": 480,
+		"Sprinkler_ObjDamageRate_High": 10.0,
+		"Sprinkler_ObjDamageRate_Mid": 10.0,
+		"Sprinkler_ObjDamageRate_Low": 10.0,
+		"Sprinkler_PeriodFirst_High": 600,
+		"Sprinkler_PeriodFirst_Mid": 450,
+		"Sprinkler_PeriodFirst_Low": 300,
+		"Sprinkler_PeriodSecond_High": 1020,
+		"Sprinkler_PeriodSecond_Mid": 960,
+		"Sprinkler_PeriodSecond_Low": 900,
+		"Trap_BombCoreRadiusRate_High": 1.375,
+		"Trap_BombCoreRadiusRate_Mid": 1.1875,
+		"Trap_BombCoreRadiusRate_Low": 1.0,
+		"Trap_MarkingFrame_High": 600,
+		"Trap_MarkingFrame_Mid": 450,
+		"Trap_MarkingFrame_Low": 300
   }
 }
