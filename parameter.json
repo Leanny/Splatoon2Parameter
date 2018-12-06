@@ -1,299 +1,127 @@
 {
-  "SubInkSaver": {
-        "ConsumeRt_Sub_High": 0.7,
-        "ConsumeRt_Sub_High_High": 0.65,
-        "ConsumeRt_Sub_High_Low": 1.0,
-        "ConsumeRt_Sub_High_Mid": 0.825,
-        "ConsumeRt_Sub_Low": 1.0,
-        "ConsumeRt_Sub_Low_High": 0.8,
-        "ConsumeRt_Sub_Low_Low": 1.0,
-        "ConsumeRt_Sub_Low_Mid": 0.9,
-        "ConsumeRt_Sub_Mid": 0.85
-  },
-  
-  "SquidMoveUp": {
-        "MoveVel_Stealth_BigWeapon_High": 2.4,
-        "MoveVel_Stealth_BigWeapon_Low": 1.728,
-        "MoveVel_Stealth_BigWeapon_Mid": 2.064,
-        "MoveVel_Stealth_High": 2.4,
-        "MoveVel_Stealth_Low": 1.92,
-        "MoveVel_Stealth_Mid": 2.16,
-        "MoveVel_Stealth_ShortWeapon_High": 2.4,
-        "MoveVel_Stealth_ShortWeapon_Low": 2.016,
-        "MoveVel_Stealth_ShortWeapon_Mid": 2.208
-  },
-  
-  "SpecialIncreaseUp": {
-        "SpecialRt_Charge_High": 1.3,
-        "SpecialRt_Charge_Low": 1.0,
-        "SpecialRt_Charge_Mid": 1.15
-  },
-  
-  "RespawnTimeSave": {
-        "Dying_AroudFrm_High": 30.0,
-        "Dying_AroudFrm_Low": 90.0,
-        "Dying_AroudFrm_Mid": 60.0,
-        "Dying_ChaseFrm_High": 90.0,
-        "Dying_ChaseFrm_Low": 270.0,
-        "Dying_ChaseFrm_Mid": 180.0
-  },
+    "Ink Saver Sub": {
+        "Low": [0.8, 0.9, 1.0],
+        "High": [0.65, 0.825, 1.0],
+        "Mid": [0.7, 0.85, 1.0]
+    },
 
-  "RespawnSpecialGaugeSave": {
-        "SpecialRt_Restart_High": 1.0,
-        "SpecialRt_Restart_Low": 0.5,
-        "SpecialRt_Restart_Mid": 0.8,
-        "SpecialRt_Restart_SuperLanding_High": 1.25,
-        "SpecialRt_Restart_SuperLanding_Low": 0.75,
-        "SpecialRt_Restart_SuperLanding_Mid": 1.05
-  },
-  
-  "OpInkEffectReduction": {
-        "OpInk_Damage_High": 0.0015,
-        "OpInk_Damage_Lmt_High": 0.2,
-        "OpInk_Damage_Lmt_Low": 0.4,
-        "OpInk_Damage_Lmt_Mid": 0.3,
-        "OpInk_Damage_Low": 0.003,
-        "OpInk_Damage_Mid": 0.00225,
-        "OpInk_JumpGnd_High": 1.05,
-        "OpInk_JumpGnd_Low": 0.8,
-        "OpInk_JumpGnd_Mid": 0.925,
-        "OpInk_JumpGnd_Msn_High": 1.05,
-        "OpInk_JumpGnd_Msn_Low": 0.6,
-        "OpInk_JumpGnd_Msn_Mid": 0.825,
-        "OpInk_VelGnd_High": 0.72,
-        "OpInk_VelGnd_Low": 0.24,
-        "OpInk_VelGnd_Mid": 0.48,
-        "OpInk_VelGnd_ShotK_High": 1.0,
-        "OpInk_VelGnd_ShotK_Low": 0.5,
-        "OpInk_VelGnd_ShotK_Mid": 0.75,
-        "OpInk_VelGnd_Shot_High": 0.4,
-        "OpInk_VelGnd_Shot_Low": 0.12,
-        "OpInk_VelGnd_Shot_Mid": 0.26
-  },
-  
-  "MarkingTimeReduction": {
-        "MarkingTime_ShortRt_High": 0.1,
-        "MarkingTime_ShortRt_Low": 1.0,
-        "MarkingTime_ShortRt_Mid": 0.55,
-        "MarkingTime_ShortRt_Thermal_High": 1.0,
-        "MarkingTime_ShortRt_Thermal_Low": 1.0,
-        "MarkingTime_ShortRt_Thermal_Mid": 1.0,
-        "MarkingTime_ShortRt_Trap_High": 0.1,
-        "MarkingTime_ShortRt_Trap_Low": 1.0,
-        "MarkingTime_ShortRt_Trap_Mid": 0.55,
-        "Silhouette_DistFar_High": 290.0,
-        "Silhouette_DistFar_Low": 170.0,
-        "Silhouette_DistFar_Mid": 230.0,
-        "Silhouette_DistNear_High": 250.0,
-        "Silhouette_DistNear_Low": 130.0,
-        "Silhouette_DistNear_Mid": 190.0
-  },
-  
-  "MainInkSave": {
-        "ConsumeRt_Main_High": 0.55,
-        "ConsumeRt_Main_High_High": 0.5,
-        "ConsumeRt_Main_High_Low": 1.0,
-        "ConsumeRt_Main_High_Mid": 0.7,
-        "ConsumeRt_Main_Low": 1.0,
-        "ConsumeRt_Main_Low_High": 0.6,
-        "ConsumeRt_Main_Low_Low": 1.0,
-        "ConsumeRt_Main_Low_Mid": 0.8,
-        "ConsumeRt_Main_Mid": 0.775
-  },
-  
-  "JumpTimeSave": {
-        "DokanWarp_MoveFrm_High": 96.6,
-        "DokanWarp_MoveFrm_Low": 138.0,
-        "DokanWarp_MoveFrm_Mid": 132.3,
-        "DokanWarp_TameFrm_High": 20.0,
-        "DokanWarp_TameFrm_Low": 80.0,
-        "DokanWarp_TameFrm_Mid": 35.0
-  },
-  
-  "InkRecoveryUp": {
-        "RecoverFullFrm_Ink_High": 117.0,
-        "RecoverFullFrm_Ink_Low": 180.0,
-        "RecoverFullFrm_Ink_Mid": 148.5,
-        "RecoverNrmlFrm_Ink_High": 220.0,
-        "RecoverNrmlFrm_Ink_Low": 600.0,
-        "RecoverNrmlFrm_Ink_Mid": 410.0
-  },
-  
-  "RunSpeedUp": {
-        "MoveVelRt_Human_ShotG_High": 1.3,
-        "MoveVelRt_Human_ShotG_Low": 1.0,
-        "MoveVelRt_Human_ShotG_Mid": 1.15,
-        "MoveVelRt_Human_Shot_High": 1.25,
-        "MoveVelRt_Human_Shot_Low": 1.0,
-        "MoveVelRt_Human_Shot_Mid": 1.125,
-        "MoveVel_Human_BigWeapon_High": 1.44,
-        "MoveVel_Human_BigWeapon_Low": 0.88,
-        "MoveVel_Human_BigWeapon_Mid": 1.16,
-        "MoveVel_Human_High": 1.44,
-        "MoveVel_Human_Low": 0.96,
-        "MoveVel_Human_Mid": 1.2,
-        "MoveVel_Human_ShortWeapon_High": 1.44,
-        "MoveVel_Human_ShortWeapon_Low": 1.04,
-        "MoveVel_Human_ShortWeapon_Mid": 1.24
-  },
-  
-  "BombDistanceUp": {
-        "BombThrow_VelZ_BombPiyo_High": 18.4,
-        "BombThrow_VelZ_BombPiyo_Low": 13.6,
-        "BombThrow_VelZ_BombPiyo_Mid": 16.0,
-        "BombThrow_VelZ_High": 16.8,
-        "BombThrow_VelZ_Low": 11.2,
-        "BombThrow_VelZ_Mid": 14.0,
-        "BombThrow_VelZ_PointSensor_High": 19.0,
-        "BombThrow_VelZ_PointSensor_Low": 15.0,
-        "BombThrow_VelZ_PointSensor_Mid": 17.0,
-		"BombThrow_VelZ_BombTako_High": 18.4,
-		"BombThrow_VelZ_BombTako_Mid": 16.0,
-		"BombThrow_VelZ_BombTako_Low": 13.6
-  },
-  
-  "BombDamageReduction": {
-        "BurstDamageRt_Main_High": 1.0,
-        "BurstDamageRt_Main_Low": 1.0,
-        "BurstDamageRt_Main_Mid": 1.0,
-        "BurstDamageRt_Special_High": 0.65,
-        "BurstDamageRt_Special_Low": 1.0,
-        "BurstDamageRt_Special_Mid": 0.825,
-        "BurstDamageRt_SubH_High": 0.5,
-        "BurstDamageRt_SubH_Low": 1.0,
-        "BurstDamageRt_SubH_Mid": 0.75,
-        "BurstDamageRt_SubL_High": 0.6,
-        "BurstDamageRt_SubL_Low": 1.0,
-        "BurstDamageRt_SubL_Mid": 0.8
-  },
-  "SpecialTime_Up": {
-		"AquaBall_HP_High": 6000,
-		"AquaBall_HP_Low": 4000,
-		"AquaBall_HP_Mid": 5000,
-		"AquaBall_ObjectEffect_Up_DamageRt_High": 1.3, 
-		"AquaBall_ObjectEffect_Up_DamageRt_Mid": 1.15, 
-		"AquaBall_ObjectEffect_Up_DamageRt_Low": 1.0,
-		"Inkjet_BombCoreRadiusRate_High": 1.3,
-		"Inkjet_BombCoreRadiusRate_Mid": 1.15,
-		"Inkjet_BombCoreRadiusRate_Low": 1.0,
-		"Inkjet_Burst_PaintR_High": 40,
-		"Inkjet_Burst_PaintR_Mid": 36,
-		"Inkjet_Burst_PaintR_Low": 32,
-		"Inkjet_Burst_SplashPaintR_High": 7,
-		"Inkjet_Burst_SplashPaintR_Mid": 6.65,
-		"Inkjet_Burst_SplashPaintR_Low": 6.3,
-		"Inkjet_Burst_SplashVelH_High": 3.5,
-		"Inkjet_Burst_SplashVelH_Mid": 3.4,
-		"Inkjet_Burst_SplashVelH_Low": 3.3,
-		"Inkjet_Burst_SplashVelL_High": 5.2,
-		"Inkjet_Burst_SplashVelL_Mid": 5.05,
-		"Inkjet_Burst_SplashVelL_Low": 4.9,
-		"RainCloud_RainAreaFrame_High": 600,
-		"RainCloud_RainAreaFrame_Mid": 540,
-		"RainCloud_RainAreaFrame_Low": 480,
-		"SuperArmor_EnergyAbsorbFrm_High": 30,
-		"SuperArmor_EnergyAbsorbFrm_Mid": 60,
-		"SuperArmor_EnergyAbsorbFrm_Low": 90,
-		"SuperArmor_ObjectEffect_Up_DamageRt_High": 3.0,
-		"SuperArmor_ObjectEffect_Up_DamageRt_Mid": 3.0,
-		"SuperArmor_ObjectEffect_Up_DamageRt_Low": 1.0,
-		"SuperArmor_PaintGauge_SpecialFrm_DamageRt_High": 540,
-		"SuperArmor_PaintGauge_SpecialFrm_DamageRt_Mid": 450,
-		"SuperArmor_PaintGauge_SpecialFrm_DamageRt_Low": 360,
-		"SuperBall_ChargeRtAutoIncr_High": 0.01,
-		"SuperBall_ChargeRtAutoIncr_Mid": 0.006,
-		"SuperBall_ChargeRtAutoIncr_Low": 0.002,
-		"SuperBall_ObjectEffect_Up_DamageRt_High": 1.05,
-		"SuperBall_ObjectEffect_Up_DamageRt_Mid": 1.025,
-		"SuperBall_ObjectEffect_Up_DamageRt_Low": 1.0,
-		"SuperBubble_BombCoreRadiusRate_High": 1.3,
-		"SuperBubble_BombCoreRadiusRate_Mid": 1.15,
-		"SuperBubble_BombCoreRadiusRate_Low": 1.0,
-		"SuperBubble_Burst_PaintR_High": 80,
-		"SuperBubble_Burst_PaintR_Mid": 68,
-		"SuperBubble_Burst_PaintR_Low": 56,
-		"SuperBubble_CollisionPlayerRadiusMax_High": 35,
-		"SuperBubble_CollisionPlayerRadiusMax_Mid": 27.5,
-		"SuperBubble_CollisionPlayerRadiusMax_Low": 20,
-		"SuperBubble_ObjectEffect_Up_DamageRt_High": 1.3,
-		"SuperBubble_ObjectEffect_Up_DamageRt_Mid": 1.3,
-		"SuperBubble_ObjectEffect_Up_DamageRt_Low": 1.0,
-		"SuperLanding_Burst_Landing_AddHeight_High": 40.0,
-		"SuperLanding_Burst_Landing_AddHeight_Mid": 20.0,
-		"SuperLanding_Burst_Landing_AddHeight_Low": 0.0,
-		"SuperLanding_Burst_Landing_AddHeight_SJ_High": 40.0,
-		"SuperLanding_Burst_Landing_AddHeight_SJ_Mid": 20.0,
-		"SuperLanding_Burst_Landing_AddHeight_SJ_Low": 0.0,
-		"SuperLanding_Burst_Landing_Height_High": 100.0,
-		"SuperLanding_Burst_Landing_Height_Mid": 60.0,
-		"SuperLanding_Burst_Landing_Height_Low": 20.0,
-		"SuperLanding_Burst_Landing_Height_SJ_High": 100.0,
-		"SuperLanding_Burst_Landing_Height_SJ_Mid": 60.0,
-		"SuperLanding_Burst_Landing_Height_SJ_Low": 20.0,
-		"SuperLanding_Burst_Radius_Far_High": 140.0,
-		"SuperLanding_Burst_Radius_Far_Mid": 140.0,
-		"SuperLanding_Burst_Radius_Far_Low": 140.0,
-		"SuperLanding_Burst_Radius_Far_SJ_High": 140.0,
-		"SuperLanding_Burst_Radius_Far_SJ_Mid": 140.0,
-		"SuperLanding_Burst_Radius_Far_SJ_Low": 140.0,
-		"SuperLanding_Burst_Radius_Middle_High": 125.0,
-		"SuperLanding_Burst_Radius_Middle_Mid": 112.5,
-		"SuperLanding_Burst_Radius_Middle_Low": 100.0,
-		"SuperLanding_Burst_Radius_Middle_SJ_High": 112.5,
-		"SuperLanding_Burst_Radius_Middle_SJ_Mid": 112.5,
-		"SuperLanding_Burst_Radius_Middle_SJ_Low": 112.5,
-		"SuperLanding_Burst_Radius_Near_High": 110.0,
-		"SuperLanding_Burst_Radius_Near_Mid": 90.0,
-		"SuperLanding_Burst_Radius_Near_Low": 70.0,
-		"SuperLanding_Burst_Radius_Near_SJ_High": 90.0,
-		"SuperLanding_Burst_Radius_Near_SJ_Mid": 90.0,
-		"SuperLanding_Burst_Radius_Near_SJ_Low": 90.0,
-		"SuperMissiles_Burst_PaintR_High": 34,
-		"SuperMissiles_Burst_PaintR_Mid": 32,
-		"SuperMissiles_Burst_PaintR_Low": 30,
-		"SuperMissiles_CrossPaintRadius_High": 20.0,
-		"SuperMissiles_CrossPaintRadius_Mid": 20.0,
-		"SuperMissiles_CrossPaintRadius_Low": 20.0,
-		"SuperMissiles_CrossPaintRayLength_High": 30.0,
-		"SuperMissiles_CrossPaintRayLength_Mid": 30.0,
-		"SuperMissiles_CrossPaintRayLength_Low": 30.0,
-		"SuperMissiles_TargetInCircleRadius_High": 240.0,
-		"SuperMissiles_TargetInCircleRadius_Mid": 190.0,
-		"SuperMissiles_TargetInCircleRadius_Low": 140.0,
-		"WaterCutter_PaintGauge_SpecialFrm_High": 585,
-		"WaterCutter_PaintGauge_SpecialFrm_Mid": 525,
-		"WaterCutter_PaintGauge_SpecialFrm_Low": 465,
-		"UltraStamp_PaintGauge_SpecialFrm_High": 660,
-		"UltraStamp_PaintGauge_SpecialFrm_Mid": 600,
-		"UltraStamp_PaintGauge_SpecialFrm_Low": 540
-  },
-  "SubPowerUp": {
-		"Shield_MaxHP_High": 15000,
-		"Shield_MaxHP_Mid": 11500,
-		"Shield_MaxHP_Low": 8000,
-		"Shield_ObjDamageRate_High": 1.5,
-		"Shield_ObjDamageRate_Mid": 1.5,
-		"Shield_ObjDamageRate_Low": 1.5,
-		"Flag_ObjDamageRate_High": 10.0,
-		"Flag_ObjDamageRate_Mid": 10.0,
-		"Flag_ObjDamageRate_Low": 10.0,
-		"Sensor_MarkingFrame_High": 960,
-		"Sensor_MarkingFrame_Mid": 720,
-		"Sensor_MarkingFrame_Low": 480,
-		"Sprinkler_ObjDamageRate_High": 10.0,
-		"Sprinkler_ObjDamageRate_Mid": 10.0,
-		"Sprinkler_ObjDamageRate_Low": 10.0,
-		"Sprinkler_PeriodFirst_High": 600,
-		"Sprinkler_PeriodFirst_Mid": 450,
-		"Sprinkler_PeriodFirst_Low": 300,
-		"Sprinkler_PeriodSecond_High": 1020,
-		"Sprinkler_PeriodSecond_Mid": 960,
-		"Sprinkler_PeriodSecond_Low": 900,
-		"Trap_BombCoreRadiusRate_High": 1.375,
-		"Trap_BombCoreRadiusRate_Mid": 1.1875,
-		"Trap_BombCoreRadiusRate_Low": 1.0,
-		"Trap_MarkingFrame_High": 600,
-		"Trap_MarkingFrame_Mid": 450,
-		"Trap_MarkingFrame_Low": 300
-  }
+    "Ink Saver Main": {
+        "Low": [0.6, 0.8, 1.0],
+        "High": [0.5, 0.7, 1.0],
+        "Mid": [0.55, 0.775, 1.0]
+    },
+
+    "Bomb Defense": {
+        "Special": [0.65, 0.825, 1.0],
+        "Additional": [1.0, 1.0, 1.0],
+        "Heavy Light": [0.6, 0.8, 1.0],
+        "Heavy Sub": [0.5, 0.75, 1.0]
+    },
+
+    "Special Charge Up": {
+        "default": [1.3, 1.15, 1.0]
+    },
+
+    "Quick Respawn": {
+        "Die Frames": [30.0, 60.0, 90.0],
+        "Deathcam Frames": [90.0, 180.0, 270.0]
+    },
+
+    "Special Saver": {
+        "Splashdown": [1.25, 1.05, 0.75],
+        "default": [1.0, 0.8, 0.5]
+    },
+
+    "Swim Speed": {
+        "Light": [2.4, 2.208, 2.016],
+        "Heavy": [2.4, 2.064, 1.728],
+        "Mid": [2.4, 2.16, 1.92]
+    },
+
+    "Special Power Up": {
+        "Tenta Missiles Cross Paint Ray Length": [30.0, 30.0, 30.0],
+        "Ultra Stamp Duration": [660, 600, 540],
+        "Baller HP": [6000, 5000, 4000],
+        "Tenta Missiles Paint Radius": [34, 32, 30],
+        "Booyah Ball Auto Charge Increase": [0.01, 0.006, 0.002],
+        "Splash Down Burst Radius Far (Stealth Jump)": [140.0, 140.0, 140.0],
+        "Ink Armor Duration": [540, 450, 360],
+        "Ink Armor Wind Up Time": [30, 60, 90],
+        "Booyah Ball Object Shredder Multiplier": [1.05, 1.025, 1.0],
+        "Splash Down Burst Radius Far": [140.0, 140.0, 140.0],
+        "Inkjet Explosion Paint Splash Velocity L": [5.2, 5.05, 4.9],
+        "Ink Storm Duration": [600, 540, 480],
+        "Inkjet Explosion Paint Splash Radius": [7, 6.65, 6.3],
+        "Tenta Missiles Cross Paint Radius": [20.0, 20.0, 20.0],
+        "Tenta Missiles Target Circle Radius": [240.0, 190.0, 140.0],
+        "Splash Down Jump-In Additional Height (Stealth Jump)": [40.0, 20.0, 0.0],
+        "Splash Down Jump-In Height (Stealth Jump)": [100.0, 60.0, 20.0],
+        "Splash Down Burst Radius Midle (Stealth Jump)": [112.5, 112.5, 112.5],
+        "Splash Down Jump-In Additional Height": [40.0, 20.0, 0.0],
+        "Inkjet Bullet Damage Radius Multiplier": [1.3, 1.15, 1.0],
+        "Sting Ray Duration": [585, 525, 465],
+        "Bubble Blower Bubble Radius Multiplier": [1.3, 1.15, 1.0],
+        "Splash Down Burst Radius Close (Stealth Jump)": [90.0, 90.0, 90.0],
+        "Splash Down Jump-In Height": [100.0, 60.0, 20.0],
+        "Bubble Blower Burst Paint Radius": [80, 68, 56],
+        "Bubble Blower Object Shredder Multiplier": [1.3, 1.3, 1.0],
+        "Inkjet Explosion Paint Radius": [40, 36, 32],
+        "Splash Down Burst Radius Close": [110.0, 90.0, 70.0],
+        "Splash Down Burst Radius Middle": [125.0, 112.5, 100.0],
+        "Bubble Blower Maximum Collision Player Radius": [35, 27.5, 20],
+        "Ink Armor Object Shredder Multiplier": [3.0, 3.0, 1.0],
+        "Inkjet Explosion Paint Splash Velocity H": [3.5, 3.4, 3.3]
+    },
+
+    "Ink Recovery Up": {
+        "Standing": [220.0, 410.0, 600.0],
+        "In Ink": [117.0, 148.5, 180.0]
+    },
+
+    "Cold Blooded": {
+        "Thermal Ink Time Reduction": [1.0, 1.0, 1.0],
+        "Silhouette Close": [250.0, 190.0, 130.0],
+        "Silhouette Far": [290.0, 230.0, 170.0],
+        "Point Sensor": [0.1, 0.55, 1.0],
+        "Ink Mine": [0.1, 0.55, 1.0]
+    },
+
+    "Ink Resistance": {
+        "Dmg Per Frame": [0.0015, 0.00225, 0.003],
+        "Run": [0.72, 0.48, 0.24],
+        "Dmg Limit": [0.2, 0.3, 0.4],
+        "Shoot K": [1.0, 0.75, 0.5],
+        "Jump": [1.05, 0.925, 0.8],
+        "Shoot": [0.4, 0.26, 0.12],
+        "Jump(story)": [1.05, 0.825, 0.6]
+    },
+
+    "Quick Super Jump": {
+        "Jump": [96.6, 132.3, 138.0],
+        "Prepare": [20.0, 35.0, 80.0]
+    },
+
+    "Run Speed": {
+        "Shooting": [1.25, 1.125, 1.0],
+        "Shooting, Splatling": [1.3, 1.15, 1.0],
+        "Light": [1.44, 1.24, 1.04],
+        "Heavy": [1.44, 1.16, 0.88],
+        "Mid": [1.44, 1.2, 0.96]
+    },
+
+    "Sub Power Up": {
+        "Point Sensor Distance Up ": [19.0, 17.0, 15.0],
+        "Splash Wall Max HP": [15000, 11500, 8000],
+        "Ink Mine Mark Radius": [1.375, 1.1875, 1.0],
+        "Ink Mine Mark Time Duration": [600, 450, 300],
+        "Sprinkler First Phase Duration": [600, 450, 300],
+        "Splash Wall Object Shredder Multiplier": [1.5, 1.5, 1.5],
+        "Torpedo Distance Up ": [18.4, 16.0, 13.6],
+        "Beakon Object Shredder Multiplier": [10.0, 10.0, 10.0],
+        "Fizzy Bomb Distance Up": [18.4, 16.0, 13.6],
+        "Sprinkler Object Shredder Multiplier": [10.0, 10.0, 10.0],
+        "Sprinkler Second Phase Duration": [1020, 960, 900],
+        "General Bomb Distance Up": [16.8, 14.0, 11.2],
+        "Point Sensor Mark Time Duration": [960, 720, 480]
+    }
 }
